@@ -1,0 +1,145 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Documento : MonoBehaviour
+{
+    // Start is called before the first frame update
+    void Start()
+    {
+        Debug.Log("I am alive and my name is " + myName);
+        Instantiate(myPrefab, new Vector3(2, 2, 2), Quaternion.identity);
+
+        for(int y = 0; y < height; ++y){
+            for(int x = 0; x < width; ++x){
+                Instantiate(objeto, new Vector3(x,y,0), Quaternion.identity);
+            }
+        }
+
+
+        for (int i = 0; i < numberOfObjects; i++)
+        {
+            float angle = i * Mathf.PI * 2 / numberOfObjects;   
+            float x = Mathf.Cos(angle) * radius;
+            float z = Mathf.Sin(angle) * radius;
+            Vector3 pos = transform.position + new Vector3(x, 0, z);
+            float angleDegrees = -angle*Mathf.Rad2Deg;
+            Quaternion rot = Quaternion.Euler(0, angleDegrees, 0);
+            Instantiate(prefab, pos, rot);
+        }
+
+    }
+
+
+
+   // Instantiates prefabs in a circle formation
+   public GameObject prefab;
+   public int numberOfObjects = 20;
+   public float radius = 5f;
+   
+
+    public Rigidbody projectile;
+    public float speed = 4;
+    void Update()
+    {
+        if (Input.GetButtonDown("Fire1"))
+        {
+            Rigidbody p = Instantiate(projectile, transform.position, transform.rotation);
+            p.velocity = transform.forward * speed;
+        }
+    }
+
+    // Update is called once per frame
+
+    public GameObject myPrefab;
+    public string myName;
+    public GameObject objeto;
+
+   public int width = 10;
+   public int height = 4;
+  
+   /* 
+       for (int y=0; y<height; ++y)
+       {
+           for (int x=0; x<width; ++x)
+           {
+               Instantiate(block, new Vector3(x,y,0), Quaternion.identity);
+           }
+       }       
+    */
+
+    // Use this for initialization
+}
+
+// Que es lo que yo estoy tratando de concebir con este continuo desarrollo del concepto, como es que puedo diferenciar 
+// Las acciones del momento presente con tal de hacer que todo este fundamento sea mas especifico como puedo determinar
+//mejores composiciones en la realidad que puedo buscar, que quiero desarrollar
+// Me falta sacar propositos los cuales me permitan determinar como todo esto sucede, como puedo ser capaz de desplegar
+//en el ahora el componente que me hace falta, el desarrollo analitico que se vive momento a momento
+//Como puedo determinar las rutas que motivan como el todo se crea
+//Cual es el concepto que permite que nuestra personalidad se pueda procesar
+//Que estoy buscando aqui que clase de relacion yo puedo promover como mi personalidad se puede determinar
+//Como mi personalidad se puede aprender, como mi realidad se puede configurar como yo puedo entender el movimiento del ahora
+//Como yo puedo buscar el rendimiento de la realidad, como yo puedo modelar el proceo que determina como vivir en completa unicidad
+//Como yo puedo estructurar el trabajo de un estado mas alto el estado que me promueve como persona.
+//Que quiero, ser capaz de aplicar las relaciones de propiedad y colision con objetvos con la fisica de contacto, la fisica de rayos
+//Y particulas es el concepto que nos permite diferenciar como las realidades entran en mocion con el ahora, como las realidades
+//De nuestra mente se pueden apreciar, como el componente de totalidad se puede colindar, como yo puedo conocer el desempeño interno 
+//
+//Usted quiero ser capaz de hacer muchas cosas, pero como es que llega usted a esas cosas, esos elementos que usted quiere procesar
+//Que clase de apreciacion usted quiere diferenciar.
+
+//Pruebe cosas matematicas, como son esos conceptos matematicos en este proceso que usted vive a todo momento.
+
+
+//Yo que estoy esperando que estoy me entrege necesito una forma de instanciar muchos objetos con tal de maximizar el comportamiento 
+//Que me entrega la salida que espero, que espero que esto haga.
+
+//Yo espero que esto produzca relaciones las cuales aprender en funcion del contenido que produce codigo el contenido que 
+//Me permite seguir escribiendo mas codigo.
+
+//Necesito alcanzar objetivos de una manera precisa, como es esta manera precisa, como estas composiciones pueden suceder
+//Necesito una forma de trabajar bases de datos, necesito ser capaz de trabajar la informacion
+//Construye una forma de mostrar y escribir codigo en pantalla, como puedo manejar el componente de tridimensionalidad el cual me permita situar comportamientos
+//entorno a un componente mas especifico un componente mas preciso el cual saber representar, como yo puedo diferenciar las realidades
+//Que clase de propiedad interna yo puedo personificar, como yo puedo comprender que valor yo puedo procesar.
+
+
+//Que quiero yo mostrar
+
+//Cual es la expresion que necesito lograr, el manejo de variables
+//De todos esos detalles, alcanza el detalle, alcanza el suceso particular una cosita.
+//Cosita detras de cosita, elemento detras de elemento aprendiendo como promover el concepto 
+//Que tu quieres determinar.
+
+
+//Tienes un cuadro muy grande con modelos en cada cuadradito, luego de que trabajes con los cuadritos tienes el siguiente modelo agragarle la capacidad 
+//De reunir puntos sobre un modelo, como puedes establecer la conexion entre los detalles como puedes juntar todas las caracteristicas en un suceso
+//Como puedes representar el componente en el ahora, como puedes ejemplificar la relacion interna con el todo 
+//Que componente quieres aprender en la totalidad con tal de sintetizar el trabajo.
+
+//Emprendiendo como la ruta se aprende como la ruta se detalla como puedo concebir el orden que produce propiedad el estado que me ayuda a concebir
+//El desarrollo interno a un punto mas alto, como puedo entender la totalidad al punto mas perfecto, asimilando con ello la realidad que en mi se mueve
+//La realidad que en mi se construye como yo puedo buscar en la totalidad las interacciones que hacen de todo esto mas pleno.
+
+//Que propiedad yo puedo usar ahora mismo, que interaccion yo puedo concebir, como mi personalidad se puede usar..
+//Que tipo de valor narrativo yo puedo usar en mi mente con tal de vivir el factor del ahora a un grado mas alto como yo puedo
+//Promover el componente que une las relaciones con el todo.
+//Es el componente que me permite establecer composiciones con el proceso, es saber diferenciar las cualidad.
+
+//Diferenciando en la mente las relaciones que me permiten construir el saber qeu me carga con personalidad.
+
+//Como es la sintetisis que modela el concepto que produce accion como es el desarrollo interno que detalla la relacion con el todo.
+
+
+//Yo siemrpe sepa como se pueden detallar las acciones a suceder.
+//Que yo pueda formalizar el trabajo de la mente de formas mas explicitas.j
+///////fkifja;jf;jsfofooennwoofwnnofonan;f;flnsl;fnana;
+// Esa es la relacion qeu tengo que establecer es el contenido que estoy buscando asi es como yo puedo determinar las relaciones que suceden en el ahora
+//Como es que la composicion con la mente se puede interpretar, relacionando el complejo que produce expresion.
+
+// QUe contenido yo puedo maximizar, como el desarrollo del ahora se puede personificar, como mi conciencia se puede establecer que clase de contexto yo puedo diferenciar
+//Como la sucesion de puntos establecen la composicion del momento presente, activando con ello la relacion de complejidad.
+
+//Es el punto mas preciso es el punto que permite el aprendizaje de todo el saber es el contenido que permi etque los detalles sucedan, es la narrativa
+//Que motiva el aprendizaje de toda las uniones .
